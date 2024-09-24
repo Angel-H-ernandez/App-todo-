@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/AmarilloBackground"
-    tools:context=".ui.view.login.SignIn_Activity">
+    tools:context=".ui.view.login.SingUpActivity">
+
 
     <LinearLayout
         android:id="@+id/LyPrincipal"
@@ -26,8 +27,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="56dp"
-            android:text="@string/sing_in"
-            android:textColor="@color/Negro"
+            android:text="@string/leyend_title_sigup"
+            android:textColor="@color/NegroOled"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -36,19 +37,19 @@
 
         </TextView>
 
-        <ImageView
-            android:id="@+id/IvLogo"
+        <EditText
+            android:id="@+id/EtNameUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:contentDescription="@string/description_imagen"
-            android:src="@drawable/user_12756012"
-            app:layout_constraintEnd_toEndOf="@id/LyPrincipal"
-            app:layout_constraintStart_toStartOf="@+id/LyPrincipal"
-            app:layout_constraintTop_toBottomOf="@+id/tvTitle">
-
-        </ImageView>
-
+            android:layout_marginTop="32dp"
+            android:autofillHints="name"
+            android:background="@drawable/edit_text"
+            android:baselineAligned="false"
+            android:drawableStart="@drawable/ic_user"
+            android:drawablePadding="8dp"
+            android:hint="@string/placeholder_name"
+            android:inputType="text"
+            android:padding="12dp" />
 
         <EditText
             android:id="@+id/EtEmail"
@@ -65,79 +66,64 @@
             android:padding="12dp" />
 
 
+        <EditText
+            android:id="@+id/EtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:autofillHints="password"
+            android:background="@drawable/edit_text"
+            android:baselineAligned="false"
+            android:drawableStart="@drawable/ic_block"
+            android:drawablePadding="8dp"
+            android:hint="@string/placeholder_passwpord"
+            android:inputType="textPassword"
+            android:padding="12dp" />
 
+        <EditText
+            android:id="@+id/EtPasswordConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:autofillHints="password"
+            android:background="@drawable/edit_text"
+            android:baselineAligned="false"
+            android:drawableStart="@drawable/ic_block"
+            android:drawablePadding="8dp"
+            android:hint="@string/placeholder_password_confirm"
+            android:inputType="textPassword"
+            android:padding="12dp" />
 
-            <EditText
-                android:id="@+id/EtPassword"
+        <!--com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleDrawable="@drawable/ic_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:autofillHints="password"
-                android:background="@drawable/edit_text"
-                android:baselineAligned="false"
-                android:drawableStart="@drawable/ic_block"
-                android:drawablePadding="8dp"
-                android:hint="contraseña"
                 android:inputType="textPassword"
-                android:padding="12dp" />
+                android:hint="Ingrese su contraseña"/>
 
+        </com.google.android.material.textfield.TextInputLayout> -->
 
 
         <Button
-            android:id="@+id/BtSignIn"
+            android:id="@+id/BtSignUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:background="@drawable/button_black_redonded"
             android:baselineAligned="false"
-            android:text="@string/string_button_sigin"
+            android:text="@string/string_button_sigup"
             android:textSize="20sp">
 
         </Button>
 
-        <TextView
-            android:id="@+id/TvSignUp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="32dp"
-            android:text="@string/string_leyend_sigup"
-            android:textColor="@color/azul"
-            android:textStyle="bold">
-
-        </TextView>
-
-
-        <!--<androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/btApple"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/button_black_redonded"
-            android:paddingVertical="8dp"
-            android:src="@drawable/ic_apple"
-            android:tint="@color/white"
-            app:layout_constraintStart_toStartOf="parent"
-
-            app:layout_constraintTop_toBottomOf="@+id/IvLogo">
-
-
-        </androidx.appcompat.widget.AppCompatImageButton>
-
-        <ImageButton
-
-            android:id="@+id/btGoogle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/button_black_redonded"
-            android:paddingVertical="8dp"
-            android:src="@drawable/ic_google"
-            app:cornerRadius="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btApple">
-
-        </ImageButton>-->
 
     </LinearLayout>
 
@@ -147,7 +133,6 @@
         android:layout_height="match_parent"
         android:background="@color/NegroTransparencia"
         android:orientation="vertical"
-        tools:visibility="visible"
         android:visibility="gone">
 
         <ProgressBar

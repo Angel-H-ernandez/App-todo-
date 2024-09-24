@@ -1,4 +1,4 @@
-package com.angel_inc.todoapp.ui
+package com.angel_inc.todoapp.ui.view.timer
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
