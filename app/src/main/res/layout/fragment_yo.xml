@@ -3,12 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/AmarilloBackground"
+    android:background="?attr/background"
     tools:context=".ui.view.yo.YoFragment">
 
     <TextView
         android:textSize="36sp"
         android:gravity="center"
+        android:textColor="?android:attr/textColor"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="No implementado" />

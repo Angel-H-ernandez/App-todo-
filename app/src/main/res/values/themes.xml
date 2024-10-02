@@ -4,6 +4,10 @@
         <!-- Customize your light theme here. -->
         <item name="colorPrimary">@color/NegroOled</item>
 
+        <item name="background">@color/AmarilloBackground</item>
+        <item name="android:textColor">@color/NegroOled</item>
+
+
     </style>
 
     <style name="Theme.TodoApp" parent="Base.Theme.TodoApp" />
