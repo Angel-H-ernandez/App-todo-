@@ -29,7 +29,7 @@
             android:layout_gravity="bottom|start"
             android:textSize="22sp"
 
-            android:textColor="?android:attr/textColor"
+            android:textColor="?attr/TextTitulo"
             android:layout_height="wrap_content">
 
         </TextView>

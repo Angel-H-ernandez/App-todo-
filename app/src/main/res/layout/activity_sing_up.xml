@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/AmarilloBackground"
+    android:background="?attr/background"
     tools:context=".ui.view.login.SingUpActivity">
 
 
@@ -28,7 +28,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="56dp"
             android:text="@string/leyend_title_sigup"
-            android:textColor="@color/NegroOled"
+            android:textColor="?attr/TextTitulo"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -117,12 +117,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:background="@drawable/button_black_redonded"
+            android:padding="12dp"
             android:baselineAligned="false"
+            app:cornerRadius="8dp"
+            app:backgroundTint="?attr/backgroundButton"
+            android:textColor="@color/AmarilloBackground"
             android:text="@string/string_button_sigup"
             android:textSize="20sp">
 
         </Button>
+
+
 
 
     </LinearLayout>
